@@ -11,7 +11,7 @@ exports.createOrder = async (req, res) => {
                 'Content-Type': 'application/json',
                 // Add additional headers if needed
             },
-        }).then((response)=>console.log(response.data)).catch((error) => console.error('Error:', error.message));
+        })
         res.status(response.status).json(response.data);
     } catch (error) {
         console.log('Error:', error.message);
