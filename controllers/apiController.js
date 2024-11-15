@@ -12,7 +12,8 @@ exports.createOrder = async (req, res) => {
                 // Add additional headers if needed
             },
         })
-        res.status(response.status).json(response.results);
+        console.log(response)
+        res.status(200).send(response.data)
     } catch (error) {
         console.log('Error:', error.message);
         res.status(error.response?.status || 500).json({
